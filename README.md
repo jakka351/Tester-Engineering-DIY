@@ -64,16 +64,6 @@ Tester-Engineering-DIY/
     └── photos/                                ← drop your own build photos here
 ```
 
-### Adding your own photos
-
-Throughout the guides, spots that want a real photo are marked like this:
-
-> 📷 **PHOTO:** *short description of the shot to take*
-
-Save the photo into `diagrams/photos/` with the filename shown in the placeholder, and it will
-appear in the rendered Markdown automatically. Photos of the actual wiring, the fitted HAT, the
-DB9/OBD cable and the TES connect dialog are the most useful.
-
 ---
 
 *Tester Present Specialist Automotive Solutions — tester tooling documentation.*
