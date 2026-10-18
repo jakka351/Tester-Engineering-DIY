@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="860" height="560" fill="#ffffff"/>
+  <text x="430" y="34" font-size="22" font-weight="700" text-anchor="middle" fill="#1a2f73">OBD-II (J1962) ↔ DB9 — CAN pinout</text>
+  <text x="430" y="56" font-size="13" text-anchor="middle" fill="#b00020" font-weight="600">Buzz out EVERY pin with a multimeter before plugging into a vehicle. Pin 16 is +12 V, always live.</text>
+
+  <!-- OBD-II connector -->
+  <text x="190" y="92" font-size="15" font-weight="700" text-anchor="middle" fill="#333">Vehicle OBD-II socket (looking in)</text>
+  <!-- top row 1-8, bottom row 9-16 (trapezoid) -->
+  <polygon points="60,110 320,110 300,185 80,185" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <!-- pin circles top row 1..8 -->
+  <g font-size="11" text-anchor="middle">
+    <circle cx="90"  cy="128" r="9" fill="#fff" stroke="#888"/><text x="90"  y="132">1</text>
+    <circle cx="120" cy="128" r="9" fill="#fff" stroke="#888"/><text x="120" y="132">2</text>
+    <circle cx="150" cy="128" r="9" fill="#cde4cd" stroke="#2e7d32"/><text x="150" y="132">3</text>
+    <circle cx="180" cy="128" r="9" fill="#ffe0b2" stroke="#b36b00"/><text x="180" y="132">4</text>
+    <circle cx="210" cy="128" r="9" fill="#ffe0b2" stroke="#b36b00"/><text x="210" y="132">5</text>
+    <circle cx="240" cy="128" r="9" fill="#ffd1d1" stroke="#b00020"/><text x="240" y="132">6</text>
+    <circle cx="270" cy="128" r="9" fill="#fff" stroke="#888"/><text x="270" y="132">7</text>
+    <circle cx="300" cy="128" r="9" fill="#fff" stroke="#888"/><text x="300" y="132">8</text>
+  </g>
+  <!-- bottom row 9..16 -->
+  <g font-size="11" text-anchor="middle">
+    <circle cx="95"  cy="166" r="9" fill="#fff" stroke="#888"/><text x="95"  y="170">9</text>
+    <circle cx="124" cy="166" r="9" fill="#fff" stroke="#888"/><text x="124" y="170">10</text>
+    <circle cx="153" cy="166" r="9" fill="#cde4cd" stroke="#2e7d32"/><text x="153" y="170">11</text>
+    <circle cx="182" cy="166" r="9" fill="#fff" stroke="#888"/><text x="182" y="170">12</text>
+    <circle cx="211" cy="166" r="9" fill="#fff" stroke="#888"/><text x="211" y="170">13</text>
+    <circle cx="240" cy="166" r="9" fill="#ffd1d1" stroke="#b00020"/><text x="240" y="170">14</text>
+    <circle cx="269" cy="166" r="9" fill="#fff" stroke="#888"/><text x="269" y="170">15</text>
+    <circle cx="298" cy="166" r="9" fill="#fde7a0" stroke="#b38f00"/><text x="298" y="170">16</text>
+  </g>
+
+  <!-- DB9 connector -->
+  <text x="650" y="92" font-size="15" font-weight="700" text-anchor="middle" fill="#333">DB9 (as wired by OBD→DB9 cable)</text>
+  <polygon points="520,115 780,115 760,180 540,180" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <g font-size="11" text-anchor="middle">
+    <circle cx="560" cy="133" r="9" fill="#ffe0b2" stroke="#b36b00"/><text x="560" y="137">1</text>
+    <circle cx="595" cy="133" r="9" fill="#ffe0b2" stroke="#b36b00"/><text x="595" y="137">2</text>
+    <circle cx="630" cy="133" r="9" fill="#ffd1d1" stroke="#b00020"/><text x="630" y="137">3</text>
+    <circle cx="665" cy="133" r="9" fill="#fff" stroke="#888"/><text x="665" y="137">4</text>
+    <circle cx="700" cy="133" r="9" fill="#ffd1d1" stroke="#b00020"/><text x="700" y="137">5</text>
+    <circle cx="578" cy="166" r="9" fill="#fff" stroke="#888"/><text x="578" y="170">6</text>
+    <circle cx="613" cy="166" r="9" fill="#fff" stroke="#888"/><text x="613" y="170">7</text>
+    <circle cx="648" cy="166" r="9" fill="#fff" stroke="#888"/><text x="648" y="170">8</text>
+    <circle cx="683" cy="166" r="9" fill="#fde7a0" stroke="#b38f00"/><text x="683" y="170">9</text>
+  </g>
+
+  <!-- mapping table -->
+  <text x="430" y="235" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2f73">Standard OBD-II → DB9 cable mapping (SparkFun/Core/Little Bird)</text>
+  <g font-size="13">
+    <rect x="80" y="250" width="700" height="28" fill="#1a2f73"/>
+    <text x="150" y="269" fill="#fff" text-anchor="middle" font-weight="700">Signal</text>
+    <text x="360" y="269" fill="#fff" text-anchor="middle" font-weight="700">OBD-II pin</text>
+    <text x="560" y="269" fill="#fff" text-anchor="middle" font-weight="700">DB9 pin</text>
+    <text x="710" y="269" fill="#fff" text-anchor="middle" font-weight="700">Colour key</text>
+
+    <rect x="80" y="278" width="700" height="26" fill="#ffd1d1"/>
+    <text x="150" y="296" text-anchor="middle" font-weight="700">CAN-H (HS)</text>
+    <text x="360" y="296" text-anchor="middle">6</text>
+    <text x="560" y="296" text-anchor="middle">3</text>
+    <text x="710" y="296" text-anchor="middle" fill="#b00020">red</text>
+
+    <rect x="80" y="304" width="700" height="26" fill="#ffe3e3"/>
+    <text x="150" y="322" text-anchor="middle" font-weight="700">CAN-L (HS)</text>
+    <text x="360" y="322" text-anchor="middle">14</text>
+    <text x="560" y="322" text-anchor="middle">5</text>
+    <text x="710" y="322" text-anchor="middle" fill="#b00020">red</text>
+
+    <rect x="80" y="330" width="700" height="26" fill="#eaf3ea"/>
+    <text x="150" y="348" text-anchor="middle" font-weight="700">MS-CAN-H*</text>
+    <text x="360" y="348" text-anchor="middle">3</text>
+    <text x="560" y="348" text-anchor="middle">(not on std cable)</text>
+    <text x="710" y="348" text-anchor="middle" fill="#2e7d32">green</text>
+
+    <rect x="80" y="356" width="700" height="26" fill="#f3f6ee"/>
+    <text x="150" y="374" text-anchor="middle" font-weight="700">MS-CAN-L*</text>
+    <text x="360" y="374" text-anchor="middle">11</text>
+    <text x="560" y="374" text-anchor="middle">(not on std cable)</text>
+    <text x="710" y="374" text-anchor="middle" fill="#2e7d32">green</text>
+
+    <rect x="80" y="382" width="700" height="26" fill="#fff4e0"/>
+    <text x="150" y="400" text-anchor="middle" font-weight="700">Ground</text>
+    <text x="360" y="400" text-anchor="middle">4 (chassis), 5 (signal)</text>
+    <text x="560" y="400" text-anchor="middle">2, 1</text>
+    <text x="710" y="400" text-anchor="middle" fill="#b36b00">orange</text>
+
+    <rect x="80" y="408" width="700" height="26" fill="#fdf6d8"/>
+    <text x="150" y="426" text-anchor="middle" font-weight="700">+12 V battery</text>
+    <text x="360" y="426" text-anchor="middle">16</text>
+    <text x="560" y="426" text-anchor="middle">9</text>
+    <text x="710" y="426" text-anchor="middle" fill="#b38f00">yellow</text>
+    <rect x="80" y="250" width="700" height="184" fill="none" stroke="#1a2f73" stroke-width="1.5"/>
+  </g>
+  <text x="80" y="452" font-size="11" fill="#555">* MS-CAN (Ford, pins 3/11) is not carried by the standard OBD→DB9 cable; wire it separately if you need it.</text>
+
+  <!-- warning box -->
+  <rect x="80" y="468" width="700" height="72" rx="6" fill="#fff4f4" stroke="#b00020" stroke-width="2"/>
+  <text x="96" y="490" font-size="13" font-weight="700" fill="#b00020">PiCAN DB9 default ≠ this cable.</text>
+  <text x="96" y="510" font-size="12" fill="#333">By default a PiCAN board puts CAN-H on DB9 pin 7, CAN-L on pin 2, GND on pin 3 (CiA DS-102). To use this</text>
+  <text x="96" y="527" font-size="12" fill="#333">OBD→DB9 cable you must set the board's solder bridges to the "OBD" layout (pin 3 = CAN-H, pin 5 = CAN-L). Verify with a meter.</text>
+</svg>

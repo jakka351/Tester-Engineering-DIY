@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="980" height="440" fill="#ffffff"/>
+  <text x="490" y="30" font-size="20" font-weight="700" text-anchor="middle" fill="#1a2f73">Path ① — Raspberry Pi + PiCAN3 + socketcand (signal &amp; power flow)</text>
+
+  <!-- Vehicle -->
+  <rect x="20" y="70" width="150" height="120" rx="8" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <text x="95" y="95" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2f73">Vehicle</text>
+  <text x="95" y="118" font-size="12" text-anchor="middle">OBD-II port</text>
+  <text x="95" y="138" font-size="11" text-anchor="middle" fill="#b00020">pin 6 CAN-H</text>
+  <text x="95" y="154" font-size="11" text-anchor="middle" fill="#b00020">pin 14 CAN-L</text>
+  <text x="95" y="170" font-size="11" text-anchor="middle" fill="#b38f00">pin 16 +12 V</text>
+
+  <!-- cable -->
+  <line x1="170" y1="130" x2="250" y2="130" stroke="#333" stroke-width="2"/>
+  <text x="210" y="122" font-size="10" text-anchor="middle" fill="#555">OBD→DB9</text>
+  <text x="210" y="146" font-size="10" text-anchor="middle" fill="#555">cable</text>
+
+  <!-- PiCAN3 -->
+  <rect x="250" y="60" width="210" height="300" rx="8" fill="#f3f6ee" stroke="#2e7d32" stroke-width="2"/>
+  <text x="355" y="84" font-size="14" font-weight="700" text-anchor="middle" fill="#2e7d32">PiCAN3 HAT</text>
+  <rect x="270" y="100" width="170" height="46" rx="5" fill="#fff" stroke="#888"/>
+  <text x="355" y="120" font-size="11" text-anchor="middle">DB9 (set to OBD layout:</text>
+  <text x="355" y="136" font-size="11" text-anchor="middle">pin3=CAN-H, pin5=CAN-L)</text>
+  <rect x="270" y="156" width="170" height="40" rx="5" fill="#fff" stroke="#888"/>
+  <text x="355" y="173" font-size="11" text-anchor="middle">MCP2515 + MCP2551</text>
+  <text x="355" y="188" font-size="11" text-anchor="middle">16 MHz • 120Ω jumper OFF</text>
+  <rect x="270" y="206" width="170" height="40" rx="5" fill="#fde7a0" stroke="#b38f00"/>
+  <text x="355" y="223" font-size="11" text-anchor="middle" font-weight="700">3 A SMPS (6–24 V in)</text>
+  <text x="355" y="238" font-size="11" text-anchor="middle">→ 5 V to the Pi</text>
+  <rect x="270" y="256" width="170" height="36" rx="5" fill="#fff" stroke="#888"/>
+  <text x="355" y="278" font-size="11" text-anchor="middle">SPI0 • INT=GPIO25</text>
+  <text x="355" y="316" font-size="10" text-anchor="middle" fill="#555">40-pin GPIO header</text>
+  <line x1="300" y1="326" x2="410" y2="326" stroke="#2e7d32" stroke-width="6"/>
+
+  <!-- Pi -->
+  <rect x="500" y="60" width="200" height="300" rx="8" fill="#eef1f8" stroke="#a4005a" stroke-width="2"/>
+  <text x="600" y="84" font-size="14" font-weight="700" text-anchor="middle" fill="#a4005a">Raspberry Pi 4</text>
+  <text x="600" y="330" font-size="10" text-anchor="middle" fill="#555">40-pin GPIO header</text>
+  <line x1="545" y1="326" x2="655" y2="326" stroke="#a4005a" stroke-width="6"/>
+  <rect x="520" y="110" width="160" height="40" rx="5" fill="#fff" stroke="#888"/>
+  <text x="600" y="127" font-size="11" text-anchor="middle">Raspberry Pi OS</text>
+  <text x="600" y="142" font-size="11" text-anchor="middle">can0 (SocketCAN)</text>
+  <rect x="520" y="158" width="160" height="40" rx="5" fill="#fff" stroke="#888"/>
+  <text x="600" y="175" font-size="11" text-anchor="middle" font-weight="700">socketcand</text>
+  <text x="600" y="190" font-size="11" text-anchor="middle">TCP :29536</text>
+  <rect x="520" y="206" width="160" height="40" rx="5" fill="#fff" stroke="#888"/>
+  <text x="600" y="223" font-size="11" text-anchor="middle">Wi-Fi AP (wlan0)</text>
+  <text x="600" y="238" font-size="11" text-anchor="middle">or Ethernet (eth0)</text>
+
+  <!-- HAT sits on Pi -->
+  <line x1="460" y1="210" x2="500" y2="210" stroke="#777" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="480" y="202" font-size="9" text-anchor="middle" fill="#777">stacks</text>
+
+  <!-- wireless link -->
+  <path d="M700 185 C 760 185, 760 185, 800 185" stroke="#1a2f73" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+  <text x="760" y="176" font-size="10" text-anchor="middle" fill="#1a2f73">Wi-Fi / Ethernet</text>
+  <text x="760" y="200" font-size="10" text-anchor="middle" fill="#1a2f73">TCP 29536</text>
+
+  <!-- TES laptop -->
+  <rect x="800" y="120" width="160" height="130" rx="8" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <text x="880" y="145" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2f73">TES laptop</text>
+  <text x="880" y="170" font-size="11" text-anchor="middle">SocketCAN</text>
+  <text x="880" y="186" font-size="11" text-anchor="middle">(network) transport</text>
+  <text x="880" y="210" font-size="10" text-anchor="middle" fill="#555">host · 29536 · can0</text>
+  <text x="880" y="226" font-size="10" text-anchor="middle" fill="#555">+ listen-only option</text>
+
+  <!-- power-flow caption -->
+  <rect x="20" y="300" width="210" height="60" rx="6" fill="#fdf6d8" stroke="#b38f00" stroke-width="1.5"/>
+  <text x="125" y="320" font-size="11" font-weight="700" text-anchor="middle" fill="#b38f00">Power path</text>
+  <text x="125" y="338" font-size="10" text-anchor="middle">OBD pin16 +12 V → DB9 pin9</text>
+  <text x="125" y="352" font-size="10" text-anchor="middle">→ PiCAN3 SMPS → 5 V → Pi</text>
+
+  <text x="490" y="398" font-size="11" text-anchor="middle" fill="#b00020" font-weight="600">Terminator jumper OFF for vehicle work • pin 16 is always-live (battery drain) • shut down cleanly</text>
+  <text x="490" y="418" font-size="10" text-anchor="middle" fill="#555">Oscillator: PiCAN=16 MHz · Waveshare=12 MHz · bare blue MCP2515 module=8 MHz (check the crystal)</text>
+</svg>

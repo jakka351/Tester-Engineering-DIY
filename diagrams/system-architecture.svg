@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450" y="32" font-size="20" font-weight="700" text-anchor="middle" fill="#1a2f73">DIY interfaces → Tester Engineering Suite</text>
+
+  <!-- Vehicle -->
+  <rect x="30" y="160" width="150" height="110" rx="8" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <text x="105" y="200" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2f73">Vehicle</text>
+  <text x="105" y="224" font-size="12" text-anchor="middle">CAN bus via</text>
+  <text x="105" y="242" font-size="12" text-anchor="middle">OBD-II port</text>
+
+  <!-- Path 1 -->
+  <rect x="260" y="60" width="250" height="120" rx="8" fill="#f3f6ee" stroke="#2e7d32" stroke-width="2"/>
+  <text x="385" y="86" font-size="14" font-weight="700" text-anchor="middle" fill="#2e7d32">① Raspberry Pi + CAN HAT</text>
+  <text x="385" y="110" font-size="12" text-anchor="middle">SocketCAN (can0) + socketcand</text>
+  <text x="385" y="130" font-size="12" text-anchor="middle">Wi-Fi AP / Ethernet · TCP 29536</text>
+  <text x="385" y="154" font-size="11" text-anchor="middle" fill="#555">PiCAN3 / Waveshare / MCP2515</text>
+
+  <!-- Path 2 -->
+  <rect x="260" y="240" width="250" height="120" rx="8" fill="#eef7f8" stroke="#00878f" stroke-width="2"/>
+  <text x="385" y="266" font-size="14" font-weight="700" text-anchor="middle" fill="#00878f">② Arduino + MCP2515</text>
+  <text x="385" y="290" font-size="12" text-anchor="middle">SLCAN firmware (Lawicel)</text>
+  <text x="385" y="310" font-size="12" text-anchor="middle">USB serial @ 115200</text>
+  <text x="385" y="334" font-size="11" text-anchor="middle" fill="#555">UNO/Nano + MCP2515 shield</text>
+
+  <!-- links vehicle to paths -->
+  <line x1="180" y1="200" x2="260" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="230" x2="260" y2="300" stroke="#333" stroke-width="2"/>
+  <text x="222" y="150" font-size="9" text-anchor="middle" fill="#555">OBD→DB9</text>
+
+  <!-- TES -->
+  <rect x="610" y="120" width="250" height="180" rx="8" fill="#eef1f8" stroke="#1a2f73" stroke-width="2"/>
+  <text x="735" y="148" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2f73">Tester Engineering Suite</text>
+  <rect x="630" y="165" width="210" height="52" rx="5" fill="#f3f6ee" stroke="#2e7d32"/>
+  <text x="735" y="185" font-size="12" text-anchor="middle" font-weight="700">SocketCAN (network) transport</text>
+  <text x="735" y="203" font-size="11" text-anchor="middle">host · port 29536 · can0 · listen?</text>
+  <rect x="630" y="227" width="210" height="52" rx="5" fill="#eef7f8" stroke="#00878f"/>
+  <text x="735" y="247" font-size="12" text-anchor="middle" font-weight="700">Serial-CAN (slcan) transport</text>
+  <text x="735" y="265" font-size="11" text-anchor="middle">COM port · bitrate · ISO-TP in TES</text>
+
+  <line x1="510" y1="120" x2="610" y2="190" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="510" y1="300" x2="610" y2="253" stroke="#00878f" stroke-width="2"/>
+
+  <text x="450" y="398" font-size="11" text-anchor="middle" fill="#555">Both deliver raw CAN frames; TES runs the ISO 15765-2 (ISO-TP) and UDS/OBD stack in software.</text>
+</svg>
