@@ -24,6 +24,7 @@ flowchart LR
     PI -.->|Wi-Fi AP / Ethernet<br/>TCP 29536| TES["TES laptop<br/>SocketCAN transport"]
     ARD -->|USB cable| TES2["TES laptop<br/>Serial-CAN transport"]
 ```
+<img width="4080" height="2296" alt="image" src="https://github.com/user-attachments/assets/da4c835f-6ce7-4d69-a0f2-29596d96c438" />
 
 ## Which one should I build?
 
