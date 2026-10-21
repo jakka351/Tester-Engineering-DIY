@@ -65,7 +65,7 @@ Tester-Engineering-DIY/
     └── photos/                                ← drop your own build photos here
 ```
 
-<img width="1200" height="1553" alt="TesterPresent_Brochure_Animated" src="https://github.com/user-attachments/assets/077a5095-b94f-4aa4-848b-d4a01754f38f" />
+<img width="60%" height="60%" alt="TesterPresent_Brochure_Animated" src="https://github.com/user-attachments/assets/077a5095-b94f-4aa4-848b-d4a01754f38f" />
 
 
 ---
